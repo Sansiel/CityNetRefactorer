@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer, WordNetLemmatizer
-from pymystem3 import Mystem
+# from pymystem3 import Mystem
 
 # import nltk
 # nltk.download('wordnet')
@@ -14,7 +14,7 @@ from pymystem3 import Mystem
 stopwords = stopwords.words('russian')
 stemmer = PorterStemmer()
 lemmatizer = WordNetLemmatizer()
-my_stem = Mystem()
+# my_stem = Mystem()
 
 # Tf/df и последня лекция
 
@@ -51,7 +51,7 @@ def clean_string(text):
     # Лематизация
     text = ' '.join([lemmatizer.lemmatize(word) for word in text.split()])
     # MyStem (лучше с русским работает)
-    text = ' '.join(my_stem.lemmatize(text)).strip()
+    # text = ' '.join(my_stem.lemmatize(text)).strip()
     return text
 
 
